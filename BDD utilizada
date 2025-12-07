@@ -1,0 +1,30 @@
+//Creación de BDD
+CREATE DATABASE cuarto25m26;
+GO
+
+USE cuarto25m26;
+GO
+CREATE TABLE Usuarios (
+    Id_Usuario INT IDENTITY(1,1) PRIMARY KEY,
+    Nombre_Usuario NVARCHAR(50) NOT NULL,
+    Apellido_Usuario NVARCHAR(50) NOT NULL,
+    Cedula_Usuario NVARCHAR(20) NOT NULL,
+    Correo_Usuario NVARCHAR(50) NOT NULL,
+    contasenia NVARCHAR(50) NOT NULL,
+    Estado BIT NOT NULL DEFAULT 1,
+    Fecha_Ingreso DATETIME NOT NULL DEFAULT GETDATE()
+);
+
+USE cuarto25m26;
+GO
+CREATE TABLE Clientes (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    Nombres NVARCHAR(MAX) NOT NULL,
+    Apellidos NVARCHAR(MAX) NOT NULL,
+    Direcion NVARCHAR(MAX) NOT NULL,
+    RUC NVARCHAR(MAX) NOT NULL,
+    Telefono NVARCHAR(MAX) NOT NULL,
+    Correo NVARCHAR(MAX) NOT NULL,
+    Estado BIT NOT NULL DEFAULT 1
+);
+
